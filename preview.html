@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hero animation — options — Neyora</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FAE7E3">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/preview.css">
+</head>
+<body data-fx="1">
+
+<svg class="paper-defs" aria-hidden="true" focusable="false">
+  <filter id="crease" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.0062" numOctaves="3" seed="19" result="t"/>
+    <feComponentTransfer in="t" result="ridged"><feFuncA type="table" tableValues="0 1 0"/></feComponentTransfer>
+    <feDiffuseLighting in="ridged" lighting-color="#fffdfc" surfaceScale="4.6" diffuseConstant="1">
+      <feDistantLight azimuth="228" elevation="49"/>
+    </feDiffuseLighting>
+    <feComponentTransfer>
+      <feFuncR type="linear" slope="0.34" intercept="0.66"/>
+      <feFuncG type="linear" slope="0.44" intercept="0.56"/>
+      <feFuncB type="linear" slope="0.41" intercept="0.59"/>
+    </feComponentTransfer>
+  </filter>
+  <filter id="creaseFine" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.019" numOctaves="2" seed="4" result="t"/>
+    <feComponentTransfer in="t" result="ridged"><feFuncA type="table" tableValues="0 1 0"/></feComponentTransfer>
+    <feDiffuseLighting in="ridged" lighting-color="#fffdfc" surfaceScale="2.2" diffuseConstant="1">
+      <feDistantLight azimuth="228" elevation="54"/>
+    </feDiffuseLighting>
+    <feComponentTransfer>
+      <feFuncR type="linear" slope="0.2" intercept="0.8"/>
+      <feFuncG type="linear" slope="0.26" intercept="0.74"/>
+      <feFuncB type="linear" slope="0.24" intercept="0.76"/>
+    </feComponentTransfer>
+  </filter>
+  <filter id="tooth">
+    <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4" stitchTiles="stitch"/>
+    <feColorMatrix type="saturate" values="0"/>
+    <feComponentTransfer>
+      <feFuncR type="linear" slope="0.24" intercept="0.76"/>
+      <feFuncG type="linear" slope="0.24" intercept="0.76"/>
+      <feFuncB type="linear" slope="0.24" intercept="0.76"/>
+    </feComponentTransfer>
+  </filter>
+</svg>
+<div class="crease" aria-hidden="true"></div>
+<div class="crease-fine" aria-hidden="true"></div>
+<div class="tooth" aria-hidden="true"></div>
+
+<header class="site-head" id="siteHead">
+  <div class="wrap head-inner">
+    <a class="brand" href="index.html" aria-label="Neyora, home">
+      <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="21" class="mk-ring"/>
+        <path d="M17 32.5V15.5L31 32.5V15.5" class="mk-n"/>
+      </svg>
+      <span class="wordmark">neyora</span>
+    </a>
+    <nav class="nav-desk" aria-label="Primary">
+      <a href="shop.html">Shop</a>
+      <a href="index.html#ritual">The Ritual</a>
+      <a href="index.html#idea">Our Idea</a>
+    </nav>
+    <div class="head-actions">
+      <button class="cart-btn" id="cartBtn" aria-label="Open bag" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="ico">
+          <path d="M5 8h14l-1.2 12H6.2L5 8Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/>
+        </svg>
+        <span class="cart-count" id="cartCount" hidden>0</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="head-rule" aria-hidden="true"></div>
+</header>
+
+<div class="sheet-menu" id="mobileMenu" hidden>
+  <nav aria-label="Mobile">
+    <a href="shop.html"><em>01</em> Shop</a>
+    <a href="index.html#ritual"><em>02</em> The Ritual</a>
+    <a href="index.html#idea"><em>03</em> Our Idea</a>
+  </nav>
+  <p class="sheet-foot">Little actions, bound in paper.</p>
+</div>
+
+<main id="main">
+
+<section class="hero" id="top">
+
+  <!-- 1 -->
+  <div class="fx fx-ripple" aria-hidden="true">
+    <span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- 2 -->
+  <div class="fx fx-orbit" aria-hidden="true">
+    <div class="orb"></div>
+    <div class="orb orb--in"></div>
+    <div class="arm"><i></i></div>
+    <div class="arm arm--in"><i></i></div>
+  </div>
+
+  <!-- 3 -->
+  <div class="fx fx-rules" aria-hidden="true">
+    <div class="sheet">
+      <i style="top:0"></i><i style="top:70px"></i><i style="top:140px"></i>
+      <i style="top:210px"></i><i style="top:280px"></i><i style="top:350px"></i>
+      <i style="top:420px"></i><i style="top:490px"></i><i style="top:560px"></i>
+      <i style="top:630px"></i><i style="top:700px"></i><i style="top:770px"></i>
+      <i style="top:840px"></i><i style="top:910px"></i><i style="top:980px"></i>
+      <i style="top:1050px"></i><i style="top:1120px"></i><i style="top:1190px"></i>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="hero-lead">
+      <p class="eyebrow">Paper goods for daily life</p>
+      <h1>
+        <span class="line">Little actions,</span>
+        <span class="line"><em>bound</em> in paper.</span>
+      </h1>
+      <p class="lede">
+        To-dos, journals and calendars for people who would rather begin
+        than plan forever. One page a day is enough to turn a life around.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-ink" href="shop.html">Browse the shop</a>
+        <a class="btn btn-ghost" href="index.html#idea">Why paper?</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint" aria-hidden="true">
+    <span>scroll</span>
+    <svg viewBox="0 0 12 40"><path d="M6 0v32M1.5 27 6 33l4.5-6"/></svg>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>make the bed</span><i>✳</i><span>write one line</span><i>✳</i><span>walk ten minutes</span><i>✳</i>
+    <span>drink the water</span><i>✳</i><span>call them back</span><i>✳</i><span>close one tab</span><i>✳</i>
+    <span>make the bed</span><i>✳</i><span>write one line</span><i>✳</i><span>walk ten minutes</span><i>✳</i>
+    <span>drink the water</span><i>✳</i><span>call them back</span><i>✳</i><span>close one tab</span><i>✳</i>
+  </div>
+</div>
+
+<!-- scroll past the fold to confirm nothing follows you down -->
+<section class="idea section">
+  <div class="wrap">
+    <p class="kicker">Our idea</p>
+    <h2 class="h2">A life does not change on a<br class="br-desk"> Monday. It changes on a page.</h2>
+  </div>
+</section>
+
+</main>
+
+<nav class="fx-switch" aria-label="Animation option">
+  <button type="button" data-set="1" aria-pressed="true">1 · Ripple</button>
+  <button type="button" data-set="2" aria-pressed="false">2 · Orbit</button>
+  <button type="button" data-set="3" aria-pressed="false">3 · Rules</button>
+</nav>
+
+<script>
+(function () {
+  var btns = Array.prototype.slice.call(document.querySelectorAll('.fx-switch button'));
+  function pick(n) {
+    document.body.dataset.fx = n;
+    btns.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.set === n)); });
+    try { localStorage.setItem('neyora.fx', n); } catch (e) {}
+  }
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () { pick(b.dataset.set); });
+  });
+  try {
+    var saved = localStorage.getItem('neyora.fx');
+    if (saved) pick(saved);
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>
