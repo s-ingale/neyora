@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="The Nightly Page journal with cloth spine and ribbon marker">
+  <g fill="none" stroke="#2A141A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+
+    <g transform="rotate(-4 300 300)">
+      <!-- page block edge -->
+      <path d="M176 108h250a6 6 0 0 1 6 6v372a6 6 0 0 1-6 6H176Z" fill="#F5E3DD" stroke="#D3B3AB"/>
+      <g stroke="#E0C6BF" stroke-width="2">
+        <path d="M420 118v364M410 122v356M400 126v348"/>
+      </g>
+
+      <!-- cover -->
+      <path d="M164 100h248a8 8 0 0 1 8 8v368a8 8 0 0 1-8 8H164Z" fill="#FCF5F2"/>
+
+      <!-- cloth spine -->
+      <path d="M164 100h44v384h-44Z" fill="#2A141A" stroke="#2A141A"/>
+      <path d="M208 100v384" stroke="#2A141A"/>
+      <g stroke="#F7EAE5" stroke-width="1.6" opacity=".45">
+        <path d="M176 100v384M188 100v384M198 100v384"/>
+      </g>
+
+      <!-- debossed frame -->
+      <rect x="238" y="150" width="150" height="284" rx="3" stroke="#E0C6BF" stroke-width="2"/>
+
+      <!-- Neyora mark, blind embossed -->
+      <g transform="translate(285 202)">
+        <circle cx="28" cy="28" r="27" fill="none" stroke="#2A141A" stroke-width="2"/>
+        <path d="M18 44V12L38 44V12" fill="none" stroke="#2A141A" stroke-width="3.4" stroke-linecap="square"/>
+      </g>
+
+      <!-- foil title lines -->
+      <path d="M268 320h90" stroke="#2A141A" stroke-width="6"/>
+      <path d="M286 344h54" stroke="#7E2B37" stroke-width="3.4"/>
+
+      <!-- edition mark -->
+      <path d="M292 402h42" stroke="#D3B3AB" stroke-width="3"/>
+
+      <!-- ribbon -->
+      <path d="M340 484v66l-17-16-17 16v-66" fill="#7E2B37" stroke="#5F1E28" stroke-width="2.5"/>
+    </g>
+
+  </g>
+</svg>

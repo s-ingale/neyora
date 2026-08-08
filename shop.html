@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shop — Neyora</title>
+<meta name="description" content="Three papers, one quiet system. A to-do pad, an evening journal and a year-at-a-glance calendar, made to be used every day.">
+<meta name="theme-color" content="#FAE7E3">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://s-ingale.github.io/neyora/shop.html">
+<meta property="og:title" content="Shop — Neyora">
+<meta property="og:description" content="Three papers. One quiet system.">
+<meta property="og:image" content="https://s-ingale.github.io/neyora/assets/img/og.svg">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ═══ Wrinkled paper backdrop — see index.html for how these work ═══ -->
+<svg class="paper-defs" aria-hidden="true" focusable="false">
+  <filter id="crease" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.0062" numOctaves="3" seed="19" result="t"/>
+    <feComponentTransfer in="t" result="ridged">
+      <feFuncA type="table" tableValues="0 1 0"/>
+    </feComponentTransfer>
+    <feDiffuseLighting in="ridged" lighting-color="#fffdfc" surfaceScale="4.6" diffuseConstant="1">
+      <feDistantLight azimuth="228" elevation="49"/>
+    </feDiffuseLighting>
+    <feComponentTransfer>
+      <feFuncR type="linear" slope="0.34" intercept="0.66"/>
+      <feFuncG type="linear" slope="0.44" intercept="0.56"/>
+      <feFuncB type="linear" slope="0.41" intercept="0.59"/>
+    </feComponentTransfer>
+  </filter>
+
+  <filter id="creaseFine" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.019" numOctaves="2" seed="4" result="t"/>
+    <feComponentTransfer in="t" result="ridged">
+      <feFuncA type="table" tableValues="0 1 0"/>
+    </feComponentTransfer>
+    <feDiffuseLighting in="ridged" lighting-color="#fffdfc" surfaceScale="2.2" diffuseConstant="1">
+      <feDistantLight azimuth="228" elevation="54"/>
+    </feDiffuseLighting>
+    <feComponentTransfer>
+      <feFuncR type="linear" slope="0.2" intercept="0.8"/>
+      <feFuncG type="linear" slope="0.26" intercept="0.74"/>
+      <feFuncB type="linear" slope="0.24" intercept="0.76"/>
+    </feComponentTransfer>
+  </filter>
+
+  <filter id="tooth">
+    <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4" stitchTiles="stitch"/>
+    <feColorMatrix type="saturate" values="0"/>
+    <feComponentTransfer>
+      <feFuncR type="linear" slope="0.24" intercept="0.76"/>
+      <feFuncG type="linear" slope="0.24" intercept="0.76"/>
+      <feFuncB type="linear" slope="0.24" intercept="0.76"/>
+    </feComponentTransfer>
+  </filter>
+</svg>
+<div class="crease" aria-hidden="true"></div>
+<div class="crease-fine" aria-hidden="true"></div>
+<div class="tooth" aria-hidden="true"></div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header class="site-head stuck" id="siteHead">
+  <div class="wrap head-inner">
+    <a class="brand" href="index.html" aria-label="Neyora, home">
+      <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="21" class="mk-ring"/>
+        <path d="M17 32.5V15.5L31 32.5V15.5" class="mk-n"/>
+      </svg>
+      <span class="wordmark">neyora</span>
+    </a>
+
+    <nav class="nav-desk" aria-label="Primary">
+      <a href="shop.html" aria-current="page">Shop</a>
+      <a href="index.html#ritual">The Ritual</a>
+      <a href="index.html#idea">Our Idea</a>
+    </nav>
+
+    <div class="head-actions">
+      <button class="cart-btn" id="cartBtn" aria-label="Open bag" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="ico">
+          <path d="M5 8h14l-1.2 12H6.2L5 8Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/>
+        </svg>
+        <span class="cart-count" id="cartCount" hidden>0</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="head-rule" aria-hidden="true"></div>
+</header>
+
+<!-- ═══════════════ MOBILE MENU ═══════════════ -->
+<div class="sheet-menu" id="mobileMenu" hidden>
+  <nav aria-label="Mobile">
+    <a href="shop.html"><em>01</em> Shop</a>
+    <a href="index.html#ritual"><em>02</em> The Ritual</a>
+    <a href="index.html#idea"><em>03</em> Our Idea</a>
+  </nav>
+  <p class="sheet-foot">Little actions, bound in paper.</p>
+</div>
+
+<main id="main">
+
+<!-- ═══════════════ PAGE HEAD ═══════════════ -->
+<section class="page-head">
+  <div class="wrap">
+    <p class="crumbs reveal"><a href="index.html">Neyora</a><span>/</span>Shop</p>
+    <h1 class="h2 reveal d1">Three papers.<br>One quiet system.</h1>
+    <p class="lede reveal d2">
+      Smyth-sewn so they lie flat. 120 gsm uncoated stock that takes a
+      fountain pen without bleeding. Made to be written in, not saved for
+      a better day.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════ PRODUCTS ═══════════════ -->
+<section class="shop shop--page section" id="shop">
+  <div class="wrap">
+    <div class="grid-products">
+
+      <article class="card reveal" data-id="daily" data-name="The Daily Three" data-price="499">
+        <div class="card-media">
+          <img src="assets/img/product-todo.svg" alt="The Daily Three to-do pad" width="600" height="600">
+          <span class="tag">Best seller</span>
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <h2>The Daily Three</h2>
+            <span class="price">₹499</span>
+          </div>
+          <p>A to-do pad with room for exactly three tasks. Ninety tear-off days, because a finished sheet feels like something.</p>
+          <ul class="spec">
+            <li>90 tear-off sheets, wire-o bound</li>
+            <li>148 × 210 mm (A5)</li>
+            <li>Three ruled task lines a day</li>
+          </ul>
+          <button class="btn btn-add" type="button">Add to bag</button>
+        </div>
+      </article>
+
+      <article class="card reveal d1" data-id="nightly" data-name="The Nightly Page" data-price="899">
+        <div class="card-media">
+          <img src="assets/img/product-journal.svg" alt="The Nightly Page journal with ribbon marker" width="600" height="600">
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <h2>The Nightly Page</h2>
+            <span class="price">₹899</span>
+          </div>
+          <p>A journal with one prompt per evening and nothing else. The prompt is short on purpose — you should be finished in a minute.</p>
+          <ul class="spec">
+            <li>192 pages, Smyth-sewn, lies flat</li>
+            <li>Cloth spine, blind-embossed cover</li>
+            <li>Ribbon marker, rounded corners</li>
+          </ul>
+          <button class="btn btn-add" type="button">Add to bag</button>
+        </div>
+      </article>
+
+      <article class="card reveal d2" data-id="year" data-name="The Slow Year" data-price="1199">
+        <div class="card-media">
+          <img src="assets/img/product-calendar.svg" alt="The Slow Year wall calendar" width="600" height="600">
+        </div>
+        <div class="card-body">
+          <div class="card-row">
+            <h2>The Slow Year</h2>
+            <span class="price">₹1,199</span>
+          </div>
+          <p>A wall calendar showing all twelve months at once. Mark the days you kept the promise and watch the year fill in.</p>
+          <ul class="spec">
+            <li>Single sheet, 500 × 700 mm</li>
+            <li>Undated — start it in any month</li>
+            <li>Ships rolled in a board tube</li>
+          </ul>
+          <button class="btn btn-add" type="button">Add to bag</button>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="shop-foot reveal">Free shipping over ₹1,499 &nbsp;·&nbsp; Ships in recycled board, never plastic</p>
+  </div>
+</section>
+
+<!-- ═══════════════ CROSS-LINK ═══════════════ -->
+<section class="shop-more">
+  <div class="wrap">
+    <p class="kicker reveal" style="justify-content:center">Not sure where to start</p>
+    <h2 class="h2 reveal d1">Begin with nine minutes a day.</h2>
+    <a class="btn btn-ghost reveal d2" href="index.html#ritual">Read the ritual</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="site-foot">
+  <div class="wrap foot-inner">
+    <div class="foot-brand">
+      <svg class="mark lg" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="21" class="mk-ring"/>
+        <path d="M17 32.5V15.5L31 32.5V15.5" class="mk-n"/>
+      </svg>
+      <p class="foot-word">neyora</p>
+      <p class="foot-tag">Little actions, bound in paper.</p>
+    </div>
+
+    <nav class="foot-col" aria-label="Shop">
+      <h4>Shop</h4>
+      <a href="shop.html">The Daily Three</a>
+      <a href="shop.html">The Nightly Page</a>
+      <a href="shop.html">The Slow Year</a>
+    </nav>
+
+    <nav class="foot-col" aria-label="Company">
+      <h4>Company</h4>
+      <a href="index.html#idea">Our idea</a>
+      <a href="index.html#ritual">The ritual</a>
+    </nav>
+
+    <div class="foot-col">
+      <h4>Elsewhere</h4>
+      <a href="#" aria-label="Instagram">Instagram</a>
+      <a href="mailto:hello@neyora.co">hello@neyora.co</a>
+    </div>
+  </div>
+  <div class="wrap foot-base">
+    <p>© 2026 Neyora</p>
+    <p>Made slowly, on paper first.</p>
+  </div>
+</footer>
+
+<!-- ═══════════════ BAG DRAWER ═══════════════ -->
+<div class="scrim" id="scrim" hidden></div>
+<aside class="bag" id="bag" aria-label="Shopping bag" aria-hidden="true">
+  <div class="bag-head">
+    <h2>Your bag</h2>
+    <button class="bag-close" id="bagClose" aria-label="Close bag">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <div class="bag-body" id="bagBody"></div>
+  <div class="bag-foot">
+    <div class="bag-total"><span>Subtotal</span><span id="bagTotal">₹0</span></div>
+    <button class="btn btn-ink btn-full" id="checkoutBtn" type="button">Checkout</button>
+    <p class="bag-note">Checkout is not connected yet — this is the storefront preview.</p>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

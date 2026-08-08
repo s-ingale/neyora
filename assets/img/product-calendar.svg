@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="The Slow Year wall calendar showing all twelve months">
+  <defs>
+    <!-- one month block, reused twelve times -->
+    <g id="mo" fill="#D3B3AB" stroke="none">
+      <rect x="0" y="0" width="34" height="4" rx="2" fill="#2A141A"/>
+      <g>
+        <circle cx="3" cy="16" r="3"/><circle cx="14" cy="16" r="3"/><circle cx="25" cy="16" r="3"/>
+        <circle cx="36" cy="16" r="3"/><circle cx="47" cy="16" r="3"/><circle cx="58" cy="16" r="3"/>
+        <circle cx="3" cy="28" r="3"/><circle cx="14" cy="28" r="3"/><circle cx="25" cy="28" r="3"/>
+        <circle cx="36" cy="28" r="3"/><circle cx="47" cy="28" r="3"/><circle cx="58" cy="28" r="3"/>
+        <circle cx="3" cy="40" r="3"/><circle cx="14" cy="40" r="3"/><circle cx="25" cy="40" r="3"/>
+        <circle cx="36" cy="40" r="3"/><circle cx="47" cy="40" r="3"/><circle cx="58" cy="40" r="3"/>
+        <circle cx="3" cy="52" r="3"/><circle cx="14" cy="52" r="3"/><circle cx="25" cy="52" r="3"/>
+        <circle cx="36" cy="52" r="3"/><circle cx="47" cy="52" r="3"/><circle cx="58" cy="52" r="3"/>
+      </g>
+    </g>
+  </defs>
+
+  <g fill="none" stroke="#2A141A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- hanging rail -->
+    <path d="M150 82h300" stroke="#2A141A" stroke-width="5"/>
+    <path d="M300 52v30" stroke="#7C565C" stroke-width="2.5"/>
+    <circle cx="300" cy="46" r="7" stroke="#7C565C" stroke-width="2.5"/>
+
+    <g transform="rotate(-1.5 300 320)">
+      <!-- back sheet -->
+      <rect x="140" y="98" width="322" height="418" rx="4" fill="#E5CBC4" stroke="#D3B3AB"/>
+      <!-- front sheet -->
+      <rect x="132" y="90" width="322" height="418" rx="4" fill="#FCF5F2"/>
+
+      <!-- masthead -->
+      <path d="M164 132h96" stroke="#2A141A" stroke-width="7"/>
+      <path d="M164 150h48" stroke="#7E2B37" stroke-width="3"/>
+      <path d="M132 176h322" stroke="#E0C6BF" stroke-width="2"/>
+
+      <!-- twelve months -->
+      <g>
+        <use href="#mo" x="164" y="200"/><use href="#mo" x="264" y="200"/><use href="#mo" x="364" y="200"/>
+        <use href="#mo" x="164" y="280"/><use href="#mo" x="264" y="280"/><use href="#mo" x="364" y="280"/>
+        <use href="#mo" x="164" y="360"/><use href="#mo" x="264" y="360"/><use href="#mo" x="364" y="360"/>
+        <use href="#mo" x="164" y="440"/><use href="#mo" x="264" y="440"/><use href="#mo" x="364" y="440"/>
+      </g>
+
+      <!-- days kept, marked in seal red -->
+      <g fill="#7E2B37" stroke="none">
+        <circle cx="178" cy="216" r="3.6"/><circle cx="200" cy="216" r="3.6"/><circle cx="222" cy="216" r="3.6"/>
+        <circle cx="167" cy="228" r="3.6"/><circle cx="211" cy="228" r="3.6"/><circle cx="233" cy="228" r="3.6"/>
+        <circle cx="189" cy="240" r="3.6"/><circle cx="222" cy="240" r="3.6"/>
+        <circle cx="278" cy="216" r="3.6"/><circle cx="311" cy="228" r="3.6"/><circle cx="300" cy="296" r="3.6"/>
+        <circle cx="389" cy="216" r="3.6"/><circle cx="411" cy="308" r="3.6"/><circle cx="178" cy="376" r="3.6"/>
+      </g>
+
+      <!-- today -->
+      <circle cx="300" cy="308" r="8.5" stroke="#2A141A" stroke-width="2.5"/>
+    </g>
+
+  </g>
+</svg>
